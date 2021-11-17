@@ -3,17 +3,22 @@
 
   --color-black: #000;
   --color-white: #fff;
-  --color-eastbay: #484283;
-  --color-accent: #f14f4f;
+  --color-grey: rgba(0, 0, 0, 0.6);
+  --color-light: #eee;
 
   // отступы
-
-  --grid-gap: 20px;
-  --main-offset: 40px;
+  --small-offset: 1rem;
+  --second-offset: 2rem;
+  --pre-big-offset: 4rem;
 
   // шрифты
 
-  --font-family: "Intro", sans-serif;
-  --middle-high: 700 30px / 140% var(--font-family);
+  --font-family: "Proxima Nova", sans-serif;
+  --bold-title: 700 4.8rem / 121% var(--font-family);
+  --bold-tablet-title: 700 3rem / 123% var(--font-family);
+  --bold-mobile-title: 700 2rem / 120% var(--font-family);
+
+  --regular-big: 400 2.4rem / 121% var(--font-family);
+
   --small-font: 400 14px / 140% var(--font-family);
 }

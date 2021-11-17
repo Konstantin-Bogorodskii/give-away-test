@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 *,
@@ -10,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   background-color: var(--color-white);
 }
 
@@ -52,13 +53,13 @@ a {
   display: none !important; // stylelint-disable-line declaration-no-important
 }
 
-.for-mobile {
-  display: none;
+// .for-mobile {
+//   display: none;
 
-  @include mobile {
-    display: block;
-  }
-}
+//   @include mobile {
+//     display: block;
+//   }
+// }
 
 .error {
   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
@@ -73,10 +74,25 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1210px; // Если контейнер 1180, то пишем 1210 из-за паддингов 15px по бокам
+  padding: 0 1.5rem;
+  max-width: 121rem;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.main-title {
+  margin: 0;
+  margin-bottom: var(--small-offset);
+  font: var(--bold-title);
+  color: var(--color-black);
+
+  @include tablet {
+    font: var(--bold-tablet-title);
+  }
+
+  @include mobile-small {
+    font: var(--bold-mobile-title);
+  }
 }

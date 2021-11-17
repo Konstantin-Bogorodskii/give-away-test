@@ -1,1 +1,8 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNovaBold", 700, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNovaRegular", 400, normal);
+@include font-face(
+  "ProximaNovaScOsfRegularItalic",
+  "../fonts/ProximaNovaScOsfRegularItalic",
+  400,
+  italic
+);
