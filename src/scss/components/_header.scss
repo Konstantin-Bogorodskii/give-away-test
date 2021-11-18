@@ -1,8 +1,22 @@
 @import "mixins";
 
 .header {
-  padding-top: var(--small-offset);
+  padding-top: var(--second-offset);
   background-color: var(--color-light);
+
+  @include small-tablet {
+    padding-top: 1.5rem;
+  }
+
+  @include mobile-small {
+    padding-top: var(--small-offset);
+  }
+
+  &__title {
+    @include tablet {
+      margin-bottom: 0 !important;
+    }
+  }
 
   &__container {
     @include flex-all-sb;
@@ -31,15 +45,30 @@
     @include tablet {
       font-size: 1.6rem;
       line-height: 119%;
+      max-width: 35rem;
+    }
+
+    @include tablet-md {
+      max-width: 36rem;
+    }
+
+    @include small-tablet {
+      margin-bottom: var(--second-offset);
     }
 
     @include mobile {
+      margin: 0;
       margin-bottom: 0.5rem;
     }
 
     @include mobile-small {
       font-size: 1.2rem;
       line-height: 125%;
+      width: 30rem;
+    }
+
+    @include mobile-mini {
+      width: 101%;
     }
   }
 
