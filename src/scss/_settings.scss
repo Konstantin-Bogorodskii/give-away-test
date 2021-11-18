@@ -76,6 +76,14 @@ a {
   margin: 0 auto;
   padding: 0 1.5rem;
   max-width: 121rem;
+
+  @include small-tablet {
+    padding: 0 var(--pre-big-offset);
+  }
+
+  @include mobile-small {
+    padding: 0 var(--second-offset);
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

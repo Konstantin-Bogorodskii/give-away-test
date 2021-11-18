@@ -4,10 +4,6 @@
   background-repeat: no-repeat;
 }
 
-@mixin flex {
-  display: flex;
-}
-
 @mixin flex-v-center {
   display: flex;
   align-items: center;
