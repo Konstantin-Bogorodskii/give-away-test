@@ -1,0 +1,12 @@
+.product {
+  padding: var(--big-offset) 0;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-info {
+    width: calc(40% - var(--big-offset));
+  }
+}

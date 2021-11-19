@@ -1,0 +1,33 @@
+.product__slider {
+  margin-right: var(--big-offset);
+}
+
+.slider {
+  @include flex-all-sb;
+  width: calc(60% - var(--big-offset));
+  background: var(--color-white);
+  box-shadow: 0px 0.4rem 2.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: var(--main-offset);
+
+  &__container {
+    overflow: hidden;
+    width: calc(79% - var(--main-offset));
+  }
+
+  &__preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(20% - var(--main-offset));
+  }
+}
+
+.swiper {
+  &-slide {
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
