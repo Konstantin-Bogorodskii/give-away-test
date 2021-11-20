@@ -3,14 +3,23 @@
     <div class="product__top">
       <div class="slider product__slider">
         <div class="slider-preview">
+          <div class="slider-preview__arrow">
+            <img src="../img/arrow-top.svg" alt="Previous Slide" />
+          </div>
           <div class="slider-preview__item" data-index="0">
-            <img src="../img/slide-mini-1.jpg" alt="" />
+            <img src="../img/slide-mini-1.png" alt="" />
           </div>
           <div class="slider-preview__item" data-index="1">
-            <img src="../img/slide-mini-2.jpg" alt="" />
+            <img src="../img/slide-mini-2.png" alt="" />
           </div>
-          <div class="slider-preview__item" data-index="2">
-            <img src="../img/slide-mini-3.jpg" alt="" />
+          <div
+            class="slider-preview__item slider-preview__item--third"
+            data-index="2"
+          >
+            <img src="../img/slide-mini-3.png" alt="" />
+          </div>
+          <div class="slider-preview__arrow">
+            <img src="../img/arrow-bottom.svg" alt="Next Slide" />
           </div>
         </div>
         <!-- /.slider-preview -->
@@ -43,31 +52,44 @@
       </div>
       <div class="product-info">
         <div class="product-info__top">
-          <span class="product-info__span">Best seller</span>
-          <div class="product-info__rate">
-            <div class="product-info__stars">
-              <img src="../img/star.svg" alt="Рейтинг 5 из 5" />
-              <img src="../img/star.svg" alt="" />
-              <img src="../img/star.svg" alt="" />
-              <img src="../img/star.svg" alt="" />
-              <img src="../img/star.svg" alt="" />
+          <div class="product-info__head">
+            <div class="product-info__head-top">
+              <span class="product-info__span">Best seller</span>
+              <div class="product-info__rate">
+                <div class="product-info__stars">
+                  <img src="../img/star.svg" alt="Рейтинг 5 из 5" />
+                  <img src="../img/star.svg" alt="" />
+                  <img src="../img/star.svg" alt="" />
+                  <img src="../img/star.svg" alt="" />
+                  <img src="../img/star.svg" alt="" />
+                </div>
+                <span class="product-info__reviews">(1731 reviews)</span>
+              </div>
             </div>
-            <span class="product-info__reviews">(1731 reviews)</span>
+            <h2 class="product-info__title">
+              Acne Treatment Cystic Acne heals, repairs &amp;&nbsp;renews
+            </h2>
           </div>
-          <h2 class="product-info__title">
-            Acne Treatment Cystic Acne heals, repairs & renews
-          </h2>
-          <div class="product-info__subtitle">Description:</div>
-          <p class="product-info__desc">
-            Addictively refreshing gel-cream leaves skin plump, dewy, glowing.
-          </p>
-          <span class="product-info__quantity">items left: 12</span>
-          <div class="product-info__prices">
-            <span class="product-info__old-price">us$25.89</span>
-            <span class="product-info__current-price">$0.00 FREE</span>
+          <div class="product-info__main">
+            <div class="product-info__subtitle">Description:</div>
+            <p class="product-info__desc">
+              Addictively refreshing gel-cream leaves skin plump, dewy, glowing.
+            </p>
+            <span class="product-info__quantity">items left: 12</span>
+            <hr width="99%" color="#C4C4C4" class="product-info__hr" />
+            <div class="product-info__price">
+              <span class="product-info__price-old">us$25.89</span>
+              <span class="product-info__price-current">$0.00 FREE</span>
+            </div>
+            <button class="btn btn-reset btn--primary product-info__btn">
+              Select
+            </button>
+            <img
+              class="product-info__amazon"
+              src="../img/amazon-logo.svg"
+              alt="Amazon Logo"
+            />
           </div>
-          <button class="btn btn-reset btn--primary">Select</button>
-          <img src="../img/amazon-logo.svg" alt="Amazon Logo" />
         </div>
       </div>
     </div>

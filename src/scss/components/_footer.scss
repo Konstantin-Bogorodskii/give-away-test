@@ -65,8 +65,7 @@
   }
 
   &__link {
-    font: var(--bold-main-font);
-    font-weight: 400;
+    font: var(--normal-main-font);
     color: var(--color-black);
     transition: all 0.3s ease-in-out;
 
@@ -86,8 +85,7 @@
   }
 
   &__copy {
-    font: var(--bold-main-font);
-    font-weight: 400;
+    font: var(--normal-main-font);
 
     @include small-tablet {
       font: var(--small-main-font);
