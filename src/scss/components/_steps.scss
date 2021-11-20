@@ -5,6 +5,10 @@
     padding: var(--pre-big-offset) 0 6rem;
   }
 
+  @include mobile {
+    padding: var(--main-offset) 0 6rem;
+  }
+
   @include mobile-small {
     padding: var(--second-offset) 0 var(--pre-big-offset);
   }

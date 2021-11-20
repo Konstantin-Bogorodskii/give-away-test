@@ -1,14 +1,44 @@
 .product {
   padding-top: var(--big-offset);
 
+  @include mobile {
+    padding-top: var(--main-offset);
+  }
+
+  @include mobile-small {
+    padding-top: var(--second-offset);
+  }
+
+  &__container {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 385px) {
+      align-items: inherit;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: var(--big-offset);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &-info {
     width: 41%;
+    flex-grow: 1;
+
+    @include small-tablet {
+      max-width: 35rem;
+      width: 100%;
+    }
 
     &__top {
       display: flex;
@@ -19,12 +49,21 @@
       &-top {
         @include flex-all-sb;
         margin-bottom: var(--second-offset);
+
+        @include tablet-md-s {
+          margin-bottom: var(--main-offset);
+        }
       }
     }
 
     &__span {
       font: var(--bold-main-font);
       text-transform: uppercase;
+
+      @include tablet-md-s {
+        font-size: 1.2rem;
+        line-height: 125%;
+      }
     }
 
     &__rate {
@@ -33,11 +72,22 @@
 
     &__stars {
       margin-right: var(--small-offset);
+
+      img {
+        @include tablet-md-s {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
     }
 
     &__reviews {
       font: var(--normal-main-font);
       color: var(--color-grey);
+
+      @include tablet-md-s {
+        font: var(--tablet-main-font);
+      }
     }
 
     &__title {
@@ -45,6 +95,18 @@
       margin-bottom: var(--second-offset);
       font: var(--bold-tablet-title);
       line-height: 100%;
+
+      @include tablet-md {
+        font-size: 1.8rem;
+      }
+
+      @include tablet-md-s {
+        margin-bottom: var(--small-offset);
+      }
+
+      @include mobile-small {
+        margin-bottom: 1.5rem;
+      }
     }
 
     &__main {
@@ -54,6 +116,16 @@
     &__subtitle {
       font: var(--bold-main-font);
       margin-bottom: 0.5rem;
+
+      @include tablet-md-s {
+        margin-bottom: 0.3rem;
+      }
+
+      @include mobile-small {
+        font: var(--tablet-main-font);
+        margin-bottom: 3px;
+        font-weight: 700;
+      }
     }
 
     &__desc {
@@ -61,6 +133,15 @@
       font: var(--normal-main-font);
       color: var(--color-grey);
       margin-bottom: var(--main-offset);
+
+      @include tablet-md-s {
+        margin-bottom: 1.5rem;
+      }
+
+      @include mobile-small {
+        font: var(--tablet-main-font);
+        margin-bottom: var(--second-offset);
+      }
     }
 
     &__quantity {
@@ -72,6 +153,12 @@
       font: var(--bold-main-font);
       text-transform: uppercase;
       color: #ffffff;
+
+      @include tablet-md-s {
+        font: var(--tablet-main-font);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
     }
 
     &__hr {
@@ -79,11 +166,21 @@
       border: none;
       margin-bottom: var(--second-offset);
       height: 1px;
+      width: 99%;
+      background: #c4c4c4;
+
+      @include tablet-md-s {
+        margin-bottom: 1.5rem;
+      }
     }
 
     &__price {
       @include flex-v-center;
       margin-bottom: var(--second-offset);
+
+      @include tablet-md-s {
+        margin-bottom: 1.5rem;
+      }
 
       &-old {
         margin-right: var(--small-offset);
@@ -91,10 +188,18 @@
         text-decoration-line: line-through;
         text-transform: uppercase;
         color: var(--color-grey);
+
+        @include tablet-md-s {
+          font: var(--small-main-font);
+        }
       }
 
       &-current {
         font: var(--bold-tablet-title);
+
+        @include tablet-md-s {
+          font: var(--bold-main-font);
+        }
       }
     }
 

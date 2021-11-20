@@ -1,10 +1,19 @@
 .overview {
   max-width: 62rem;
 
+  @include small-tablet {
+    max-width: 50rem;
+  }
+
   &__subtitle {
     margin: 0;
     margin-bottom: var(--small-offset);
     font: var(--bold-main-font);
+
+    @include small-tablet {
+      font: var(--small-main-font);
+      font-weight: 700;
+    }
   }
 
   &__text {
@@ -12,6 +21,15 @@
     margin-bottom: var(--second-offset);
     font: var(--normal-main-font);
     color: var(--color-grey);
+
+    @include small-tablet {
+      font: var(--small-main-font);
+    }
+
+    @include mobile-small {
+      font-size: 1.2rem;
+      line-height: 125%;
+    }
   }
 
   &__list {
@@ -38,6 +56,11 @@
     font: var(--bold-main-font);
     color: var(--color-grey);
     transition: opacity 0.3s ease-in-out;
+
+    @include small-tablet {
+      font: var(--small-main-font);
+      font-weight: 700;
+    }
 
     &:hover,
     &:focus {

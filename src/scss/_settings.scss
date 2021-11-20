@@ -83,6 +83,13 @@ a {
   color: var(--color-white);
   transition: opacity 0.3s ease-in-out;
 
+  @include small-tablet {
+    padding-top: 1.35rem;
+    padding-bottom: 1.35rem;
+    font: var(--small-main-font);
+    font-weight: 700;
+  }
+
   &--primary {
     background: var(--color-black);
   }

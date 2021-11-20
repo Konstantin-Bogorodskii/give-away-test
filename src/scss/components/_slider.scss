@@ -18,14 +18,28 @@
     padding: var(--pre-big-offset);
     height: 45rem;
   }
-  @include tablet-pre-md {
+
+  @include tablet-md-s {
     padding: var(--main-offset);
-    height: 40rem;
+    height: 39rem;
+  }
+
+  @include tablet-pre-md {
+    padding: 2.5rem;
+    height: 36rem;
   }
 
   @include small-tablet {
+    margin-right: 0;
     padding: 1.5rem;
     height: 30rem;
+    max-width: 35.5rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 400px) {
+    height: 25.6rem;
   }
 
   &__container {
@@ -55,6 +69,10 @@
       margin-right: 2.5rem;
     }
 
+    @include tablet-md-s {
+      height: 36rem;
+    }
+
     @include tablet-pre-md {
       height: 33.5rem;
       gap: 0.8rem;
@@ -66,6 +84,11 @@
       margin-right: var(--second-offset);
     }
 
+    @media (max-width: 400px) {
+      height: 23rem;
+      margin-right: 1.5rem;
+    }
+
     &__arrow {
       width: 4rem;
       height: 4rem;
@@ -74,6 +97,11 @@
       @include tablet-md {
         width: 2.2rem;
         height: 2.2rem;
+      }
+
+      @media (max-width: 400px) {
+        width: 1.8rem;
+        height: 1.8rem;
       }
 
       img {
@@ -104,6 +132,11 @@
         padding: 0.4rem;
       }
 
+      @include tablet-md-s {
+        width: 8.5rem;
+        height: 8.5rem;
+      }
+
       @include tablet-pre-md {
         width: 7.5rem;
         height: 7.5rem;
@@ -113,6 +146,11 @@
       @include small-tablet {
         width: 6.5rem;
         height: 6.5rem;
+      }
+
+      @media (max-width: 400px) {
+        width: 5rem;
+        height: 5rem;
       }
 
       &--third {
@@ -137,6 +175,11 @@
   &-slide {
     min-width: 23rem;
     min-height: 23rem;
+
+    @media (max-width: 400px) {
+      min-width: 18.5rem;
+      min-height: 18.5rem;
+    }
 
     &__img {
       width: 100%;
