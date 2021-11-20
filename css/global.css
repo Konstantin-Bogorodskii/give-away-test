@@ -1,0 +1,157 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: rgba(0, 0, 0, 0.6);
+  --color-light: #eee;
+  --color-alto: #dddddd;
+  --color-red: #e40000;
+  --small-offset: 1rem;
+  --second-offset: 2rem;
+  --main-offset: 3rem;
+  --pre-big-offset: 4rem;
+  --big-offset: 5rem;
+  --font-family: "Proxima Nova", sans-serif;
+  --bold-title: 700 4.8rem / 121% var(--font-family);
+  --bold-tablet-title: 700 3rem / 123% var(--font-family);
+  --bold-mobile-title: 700 2rem / 120% var(--font-family);
+  --bold-main-font: 700 1.8rem / 122% var(--font-family);
+  --normal-main-font: 400 1.8rem / 122% var(--font-family);
+  --small-main-font: 400 1.4rem / 121% var(--font-family);
+  --tablet-main-font: 400 1.2rem / 125% var(--font-family);
+  --regular-big: 400 2.4rem / 121% var(--font-family);
+  --small-font: 400 14px / 140% var(--font-family); }
+
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1; }
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px; }
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/../fonts/ProximaNovaBold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/../fonts/ProximaNovaRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "ProximaNovaScOsfRegularItalic";
+  src: url("../fonts/../fonts/ProximaNovaScOsfRegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic; }
+
+html {
+  box-sizing: border-box;
+  font-size: 10px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+  background-color: var(--color-white); }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.is-outer {
+  position: relative !important;
+  left: -9999px !important; }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0); }
+
+.site-container {
+  overflow: hidden; }
+
+.is-hidden {
+  display: none !important; }
+
+.error {
+  border: 2px #ff4019 solid !important; }
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer; }
+
+.btn {
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+  border-radius: 5px;
+  font: var(--bold-main-font);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: opacity 0.3s ease-in-out; }
+  @media (max-width: 768px) {
+    .btn {
+      padding-top: 1.35rem;
+      padding-bottom: 1.35rem;
+      font: var(--small-main-font);
+      font-weight: 700; } }
+  .btn--primary {
+    background: var(--color-black); }
+  .btn:hover, .btn:focus {
+    opacity: 0.7; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 121rem; }
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 var(--pre-big-offset); } }
+  @media (max-width: 500px) {
+    .container {
+      padding: 0 var(--second-offset); } }
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none; }
+
+.main-title {
+  margin: 0;
+  margin-bottom: var(--small-offset);
+  font: var(--bold-title);
+  color: var(--color-black); }
+  @media (max-width: 1100px) {
+    .main-title {
+      font: var(--bold-tablet-title); } }
+  @media (max-width: 500px) {
+    .main-title {
+      font: var(--bold-mobile-title); } }
+
+/*# sourceMappingURL=global.css.map */
