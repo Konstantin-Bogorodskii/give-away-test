@@ -1,18 +1,37 @@
 .product__slider {
   margin-right: var(--big-offset);
+
+  @include small-tablet {
+    margin-right: var(--pre-big-offset);
+  }
 }
 
 .slider {
-  @include flex-all-sb;
+  @include flex-v-center;
   width: calc(59% - var(--big-offset));
   background: var(--color-white);
   box-shadow: 0px 0.4rem 2.5rem rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   padding: var(--main-offset);
 
+  @include tablet-md {
+    padding: var(--pre-big-offset);
+    height: 45rem;
+  }
+  @include tablet-pre-md {
+    padding: var(--main-offset);
+    height: 40rem;
+  }
+
+  @include small-tablet {
+    padding: 1.5rem;
+    height: 30rem;
+  }
+
   &__container {
     overflow: hidden;
-    width: calc(79% - var(--main-offset));
+    width: calc(70% - var(--main-offset));
+    flex-grow: 1;
   }
 
   &-preview {
@@ -22,12 +41,40 @@
     justify-content: space-between;
     gap: 1.5rem;
     height: 50rem;
-    width: calc(20% - var(--main-offset));
+    width: calc(30% - var(--main-offset));
+    margin-right: var(--main-offset);
+
+    @include tablet {
+      height: 45rem;
+      gap: 1.3rem;
+    }
+
+    @include tablet-md {
+      height: 40rem;
+      gap: 1rem;
+      margin-right: 2.5rem;
+    }
+
+    @include tablet-pre-md {
+      height: 33.5rem;
+      gap: 0.8rem;
+    }
+
+    @include small-tablet {
+      height: 27rem;
+      gap: 0.7rem;
+      margin-right: var(--second-offset);
+    }
 
     &__arrow {
       width: 4rem;
       height: 4rem;
       cursor: pointer;
+
+      @include tablet-md {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
 
       img {
         display: block;
@@ -45,6 +92,28 @@
       border-radius: 3px;
       padding: 0.5rem;
       transition: opacity 0.3s ease-in-out;
+
+      @include tablet {
+        width: 10.5rem;
+        height: 10.5rem;
+      }
+
+      @include tablet-md {
+        width: 9.5rem;
+        height: 9.5rem;
+        padding: 0.4rem;
+      }
+
+      @include tablet-pre-md {
+        width: 7.5rem;
+        height: 7.5rem;
+        padding: 0.3rem;
+      }
+
+      @include small-tablet {
+        width: 6.5rem;
+        height: 6.5rem;
+      }
 
       &--third {
         padding: 0;
@@ -66,6 +135,9 @@
 
 .swiper {
   &-slide {
+    min-width: 23rem;
+    min-height: 23rem;
+
     &__img {
       width: 100%;
       object-fit: cover;

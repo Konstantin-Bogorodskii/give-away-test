@@ -1,9 +1,10 @@
 .product {
-  padding: var(--big-offset) 0;
+  padding-top: var(--big-offset);
 
   &__top {
     display: flex;
     justify-content: space-between;
+    margin-bottom: var(--big-offset);
   }
 
   &-info {
