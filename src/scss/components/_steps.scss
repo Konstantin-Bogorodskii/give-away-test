@@ -68,9 +68,13 @@
         width: 2.4rem;
         height: 1.6rem;
         position: absolute;
-        right: -3vw;
+        right: -25%;
         top: 50%;
         transform: translateY(-50%);
+
+        @media (max-width: 1140px) {
+          right: -20%;
+        }
 
         @include tablet {
           right: -6vw;

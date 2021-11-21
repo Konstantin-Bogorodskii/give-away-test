@@ -5,6 +5,7 @@ quizSection.addEventListener("click", (e) => {
     if (currentStep === 4) {
       steps[4].classList.remove("stepsbar__item--active");
       steps[4].classList.add("stepsbar__item--done");
+      location.reload();
     }
     if (currentStep < steps.length - 1) {
       steps[currentStep].classList.remove("stepsbar__item--active");
@@ -12,6 +13,7 @@ quizSection.addEventListener("click", (e) => {
 
       steps[currentStep + 1].classList.add("stepsbar__item--active");
       currentStep++;
+      renderPage(currentStep);
     }
   }
 });

@@ -94,6 +94,14 @@ a {
     background: var(--color-black);
   }
 
+  &--flex-bs {
+    flex-basis: 50%;
+  }
+
+  &--secondary {
+    background: var(--color-grey);
+  }
+
   &:hover,
   &:focus {
     opacity: 0.7;

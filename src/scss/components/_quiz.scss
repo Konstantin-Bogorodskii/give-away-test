@@ -8,7 +8,7 @@
     }
 
     &__content {
-      max-width: 47.5rem;
+      max-width: 48.5rem;
     }
 
     &__current-page {
@@ -40,6 +40,26 @@
 
     &__btn {
       width: 38rem;
+    }
+
+    &__btns {
+      width: 38rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__offer {
+      font: var(--bold-main-font);
+      color: var(--color-grey);
+    }
+
+    &__italic {
+      margin: 0;
+      margin-bottom: var(--second-offset);
+      font: var(--small-main-font);
+      font-style: italic;
+      color: var(--color-grey);
     }
   }
 }
