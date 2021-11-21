@@ -1,10 +1,25 @@
 .bonus-list {
+  @include tablet-pre-md {
+    max-width: 33rem;
+  }
+
   &__item {
     position: relative;
     margin-bottom: var(--second-offset);
     font: var(--normal-main-font);
     color: var(--color-grey);
-    padding-left: 4.5rem;
+    padding-left: 4.3rem;
+
+    @include tablet-md-s {
+      font: var(--small-main-font);
+      padding-left: 3.7rem;
+      margin-bottom: var(--small-offset);
+    }
+
+    @include mobile-small {
+      font: var(--tablet-main-font);
+      padding-left: 3rem;
+    }
 
     &::before {
       position: absolute;
@@ -19,6 +34,13 @@
       background-color: var(--color-black);
       color: var(--color-white);
       font: var(--normal-main-font);
+      text-align: center;
+
+      @include tablet-md-s {
+        width: 2rem;
+        height: 2rem;
+        font: var(--small-main-font);
+      }
     }
 
     &:nth-child(1) {
@@ -51,6 +73,10 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 2rem 2rem;
+
+        @include tablet-md-s {
+          background-size: 1.2rem 1.2rem;
+        }
       }
     }
   }

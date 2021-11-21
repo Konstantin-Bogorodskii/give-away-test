@@ -83,7 +83,7 @@ a {
   color: var(--color-white);
   transition: opacity 0.3s ease-in-out;
 
-  @include small-tablet {
+  @include tablet-pre-md {
     padding-top: 1.35rem;
     padding-bottom: 1.35rem;
     font: var(--small-main-font);

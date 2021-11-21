@@ -10,13 +10,13 @@
   }
 
   &__container {
-    @media (max-width: 768px) {
+    @include mobile-small {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    @media (max-width: 385px) {
+    @include mobile-second {
       align-items: inherit;
     }
   }
@@ -26,8 +26,9 @@
     justify-content: space-between;
     margin-bottom: var(--big-offset);
 
-    @media (max-width: 768px) {
+    @media (max-width: 730px) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -119,9 +120,6 @@
 
       @include tablet-md-s {
         margin-bottom: 0.3rem;
-      }
-
-      @include mobile-small {
         font: var(--tablet-main-font);
         margin-bottom: 3px;
         font-weight: 700;
@@ -136,11 +134,9 @@
 
       @include tablet-md-s {
         margin-bottom: 1.5rem;
-      }
-
-      @include mobile-small {
         font: var(--tablet-main-font);
         margin-bottom: var(--second-offset);
+        max-width: 23rem;
       }
     }
 

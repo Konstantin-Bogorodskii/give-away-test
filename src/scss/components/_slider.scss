@@ -1,7 +1,7 @@
 .product__slider {
   margin-right: var(--big-offset);
 
-  @include small-tablet {
+  @include tablet-pre-md {
     margin-right: var(--pre-big-offset);
   }
 }
@@ -30,12 +30,15 @@
   }
 
   @include small-tablet {
-    margin-right: 0;
     padding: 1.5rem;
     height: 30rem;
     max-width: 35.5rem;
     width: 100%;
     margin-bottom: 2.5rem;
+  }
+
+  @include mobile-small {
+    margin-right: 0;
   }
 
   @media (max-width: 400px) {

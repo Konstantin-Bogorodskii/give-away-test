@@ -2,23 +2,76 @@
   &-page {
     @include flex-all-sb;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     &__main {
       @include flex-all-sb;
       width: calc(86% - var(--pre-big-offset));
+
+      @include tablet-md {
+        flex-grow: 1;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        width: 100%;
+      }
     }
 
     &__content {
       max-width: 48.5rem;
+
+      @include tablet-md-s {
+        margin-right: var(--second-offset);
+      }
+
+      @include mobile {
+        margin-right: 0;
+        min-width: 28rem;
+      }
+    }
+
+    &__img {
+      min-width: 24rem;
+      min-height: 25rem;
+
+      @include mobile {
+        display: none;
+        min-width: 28rem;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     &__current-page {
       font: var(--bold-title);
       color: var(--color-grey);
       margin-bottom: var(--main-offset);
+
+      @include tablet-md-s {
+        font: var(--bold-tablet-title);
+        margin-bottom: var(--small-offset);
+      }
+
+      @include mobile-small {
+        font: var(--bold-mobile-title);
+      }
     }
 
     &__info {
       margin-bottom: var(--pre-big-offset);
+
+      @include tablet-md-s {
+        margin-bottom: var(--second-offset) !important;
+        max-width: 31srem;
+      }
     }
 
     &__text {
@@ -26,12 +79,26 @@
       margin-bottom: var(--second-offset);
       font: var(--normal-main-font);
       color: var(--color-grey);
+
+      @include tablet-md-s {
+        font: var(--small-main-font);
+        margin-bottom: var(--second-offset) !important;
+      }
+
+      @include mobile-small {
+        font: var(--tablet-main-font);
+        margin-bottom: var(--small-offset);
+      }
     }
 
     &__list {
       padding-left: 3.5rem;
       font: var(--normal-main-font);
       color: var(--color-grey);
+
+      @include tablet-md-s {
+        font: var(--tablet-main-font);
+      }
 
       &-item {
         padding-left: var(--small-offset);
@@ -40,6 +107,16 @@
 
     &__btn {
       width: 38rem;
+
+      @include tablet-pre-md {
+        width: 28rem;
+        margin-bottom: var(--second-offset) !important;
+      }
+
+      @include mobile {
+        width: 100%;
+        margin-bottom: var(--small-offset) !important;
+      }
     }
 
     &__btns {
@@ -47,11 +124,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include tablet-pre-md {
+        width: 32rem;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &__offer {
       font: var(--bold-main-font);
       color: var(--color-grey);
+
+      @include tablet-md-s {
+        font: var(--small-main-font);
+        font-weight: 700;
+      }
+
+      @include mobile-small {
+        font: var(--tablet-main-font);
+        font-weight: 700;
+      }
     }
 
     &__italic {
@@ -60,6 +155,11 @@
       font: var(--small-main-font);
       font-style: italic;
       color: var(--color-grey);
+
+      @include tablet-md-s {
+        font: var(--tablet-main-font);
+        font-style: italic;
+      }
     }
   }
 }
