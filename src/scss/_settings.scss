@@ -132,3 +132,21 @@ a {
     font: var(--bold-mobile-title);
   }
 }
+
+.quiz-title {
+  margin: 0;
+  margin-bottom: var(--second-offset);
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 100%;
+  color: var(--color-black);
+
+  @include tablet-pre-md {
+    font-size: 3rem;
+    margin-bottom: var(--small-offset);
+  }
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}

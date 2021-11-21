@@ -1,0 +1,45 @@
+.quiz {
+  &-page {
+    @include flex-all-sb;
+
+    &__main {
+      @include flex-all-sb;
+      width: calc(86% - var(--pre-big-offset));
+    }
+
+    &__content {
+      max-width: 47.5rem;
+    }
+
+    &__current-page {
+      font: var(--bold-title);
+      color: var(--color-grey);
+      margin-bottom: var(--main-offset);
+    }
+
+    &__info {
+      margin-bottom: var(--pre-big-offset);
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: var(--second-offset);
+      font: var(--normal-main-font);
+      color: var(--color-grey);
+    }
+
+    &__list {
+      padding-left: 3.5rem;
+      font: var(--normal-main-font);
+      color: var(--color-grey);
+
+      &-item {
+        padding-left: var(--small-offset);
+      }
+    }
+
+    &__btn {
+      width: 38rem;
+    }
+  }
+}

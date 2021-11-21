@@ -1,12 +1,12 @@
 .product {
-  padding-top: var(--big-offset);
+  padding: var(--big-offset) 0;
 
   @include mobile {
-    padding-top: var(--main-offset);
+    padding: var(--main-offset) 0;
   }
 
   @include mobile-small {
-    padding-top: var(--second-offset);
+    padding: var(--second-offset) 0;
   }
 
   &__container {

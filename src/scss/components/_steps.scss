@@ -1,16 +1,12 @@
 .steps {
-  padding: var(--big-offset) 0 10rem;
+  padding-bottom: 10rem;
 
   @include tablet {
-    padding: var(--pre-big-offset) 0 6rem;
-  }
-
-  @include mobile {
-    padding: var(--main-offset) 0 6rem;
+    padding-bottom: 0 6rem;
   }
 
   @include mobile-small {
-    padding: var(--second-offset) 0 var(--pre-big-offset);
+    padding-bottom: var(--pre-big-offset);
   }
 
   &__title {

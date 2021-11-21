@@ -1,17 +1,17 @@
-const steps = document.querySelectorAll(".stepsbar__item");
-const button = document.querySelector("#btn-next");
 let currentStep = 0;
 
-button.addEventListener("click", (e) => {
-  if (currentStep < steps.length) {
-    console.log(steps[currentStep]);
-    steps[currentStep].classList.remove("stepsbar__item--active");
-    steps[currentStep].classList.add("stepsbar__item--done");
-    console.log(steps[currentStep]);
+quizSection.addEventListener("click", (e) => {
+  if (e.target.classList.contains("btn-next-step")) {
+    if (currentStep === 4) {
+      steps[4].classList.remove("stepsbar__item--active");
+      steps[4].classList.add("stepsbar__item--done");
+    }
+    if (currentStep < steps.length - 1) {
+      steps[currentStep].classList.remove("stepsbar__item--active");
+      steps[currentStep].classList.add("stepsbar__item--done");
 
-    steps[currentStep + 1].classList.add("stepsbar__item--active");
-    console.log(steps[currentStep + 1]);
-    currentStep++;
-    console.log(currentStep);
+      steps[currentStep + 1].classList.add("stepsbar__item--active");
+      currentStep++;
+    }
   }
 });
