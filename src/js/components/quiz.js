@@ -166,7 +166,7 @@ const renderPage = (index) => {
             ${quizData[index].content}
         </div>
         <div class="quiz-page__img">
-          <img src="../img/${quizData[index].img}" alt="Acne cream" />
+          <img src="./img/${quizData[index].img}" alt="Acne cream" />
         </div>
     </div>
   </div>
@@ -184,7 +184,7 @@ const renderPage = (index) => {
     ${quizData[index].content}
   </div>
   <div class="quiz-page__img">
-    <img src="../img/${quizData[index].img}" alt="Acne cream" />
+    <img src="./img/${quizData[index].img}" alt="Acne cream" />
   </div>
     `;
   }
